@@ -70,6 +70,9 @@ BookingSchema.index({ eventId: 1, createdAt: -1 });
 // Create index on email for user booking lookups
 BookingSchema.index({ email: 1 });
 
+// Enforce one booking per event per email
+BookingSchema.index({ eventId: 1, email: 1 }, { unique: true, name: 'unique_event_email' });
+
 const Booking = mongoose.models.Booking || mongoose.model<IBooking>('Booking', BookingSchema);
 
 export default Booking;
