@@ -27,7 +27,7 @@ const EventSchema = new Schema<IEvent>(
       type: String,
       required: [true, 'Title is required'],
       trim: true,
-        maxlength: [100, 'Tittle cannot exceed 100 characters'],
+      maxlength: [100, 'Title cannot exceed 100 characters'],
     },
     slug: {
       type: String,
@@ -39,13 +39,13 @@ const EventSchema = new Schema<IEvent>(
       type: String,
       required: [true, 'Description is required'],
       trim: true,
-        maxlength: [1000, 'Description cannot exceed 1000 characters'],
+      maxlength: [1000, 'Description cannot exceed 1000 characters'],
     },
     overview: {
       type: String,
       required: [true, 'Overview is required'],
       trim: true,
-        maxlength: [500, 'Overview cannot exceed 500 characters'],
+      maxlength: [500, 'Overview cannot exceed 500 characters'],
     },
     image: {
       type: String,
